@@ -24,7 +24,8 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  background: brown; }
 
 ol, ul {
   list-style: none; }
@@ -40,3 +41,92 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.container{position: absolute; left: 50px; top: 50px;}
+
+.quote{
+	width:280px;
+	height: auto;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	color: #333;
+}
+
+.quote .top{
+	width: 280px;
+	height: 16px;
+	background: url(../images/top.png) no-repeat;
+}
+
+.quote .content{
+	width: 250px;
+	padding: 14px 15px 0px;
+	background: url(../images/content.png) repeat-y;
+}
+
+.quote .content .message > span{
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.quote .content .message > p{
+	margin-left: 21px;
+	margin-right: 10px;
+}
+
+.quote .content .message{
+	font-size: 13px;
+}
+
+.quote .content .open-quote{
+	width: 32px;
+	height: 26px;
+	display: inline-block;
+	margin-right: 12px;
+	background: url(../images/open-quote.png) no-repeat;
+}
+
+.quote .content .close-quote{
+	width: 32px;
+	height: 26px;
+	display: inline-block;
+	float: right;
+	background: url(../images/close-quote.png) no-repeat;
+}
+
+.quote .content .from{
+	margin-top: 23px;
+	margin-left: 68px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #005581;
+}
+
+.quote .bottom{
+	width: 280px;
+	height: 35px;
+	background: url(../images/bottom.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
