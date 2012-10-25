@@ -1,43 +1,37 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-  	<title>Quote</title>
-  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  	<link rel="stylesheet" href="css/style.css">
+	<title>Quote Plugin</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     
     <div class="container">
-    	
-		<div class="quote">
-			<div class="top"></div>
-			<div class="content">
-				
-				<div class="message">
-					<div class="open-quote"></div>
-					<span>Sed ipsum arcu, cons</span>
-					<p>Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.</p>
-					<div class="close-quote"></div>
-				</div>
-				
-				<div class="from">~ Pilot contributor</div>
-				
-			</div>
-			<div class="bottom"></div>
-		</div>
+		<div id="quote1"></div>
+		<div id="quote2"></div>
     </div>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  	<script type="text/javascript" src="js/jquery.quotePlugin.js"></script>
-  	<script type="text/javascript">
-			//   		$().ready(function() {
-			// $('.quote').quote({
-			// 	message: 'Sed ipsum arcu, cons Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.',
-			// 	from: 'Pilot contributor'
-			// });
-			//   	  	});
-  	</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="js/jquery.quotePlugin.js"></script>
+	<script>
+		$().ready(function() {
+			$('#quote1').quote({
+				layout: { bottom: 20, left: 35 },
+				firstLine: 'Sed ipsum arcu, cons',
+				message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.',
+				fromWho: 'Julia Beach'
+			});
+			
+			$('#quote2').quote({
+				layout: { top: 100, right: 70 },
+				firstLine: 'Sed ipsum arcu, cons',
+				message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna. Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna. Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.',
+				fromWho: 'Brad Kahl'
+			});
+		});
+	</script>
   </body>
 
 </html>

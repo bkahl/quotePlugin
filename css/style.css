@@ -42,8 +42,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.container{position: absolute; left: 50px; top: 50px;}
-
 .quote{
 	width:280px;
 	height: auto;
@@ -68,6 +66,7 @@ table {
 .quote .content .message > span{
 	font-size: 17px;
 	font-weight: bold;
+	width: 218px;
 }
 
 .quote .content .message > p{
