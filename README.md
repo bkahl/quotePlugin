@@ -13,7 +13,7 @@ Either clone this project or download the zip file to get the jquery.quotePlugin
 
 First, add jquery.quotePlugin.js to your project "js" directory.
 
-```js
+```html
 yourProject/ ->
 		* images/
 		* css/
@@ -24,7 +24,7 @@ yourProject/ ->
 
 Then, reference the jquery.quotePlugin.js file within your index.html file at the bottom of the "body" tag NOT in the "head" tag like so:
 
-```js
+```html
 <body>
 	<script src="js/jquery.quotePlugin.js"></script>
 </body>
@@ -32,7 +32,7 @@ Then, reference the jquery.quotePlugin.js file within your index.html file at th
 
 Second, add style.css to your project "css" directory.
 
-```js
+```html
 yourProject/ ->
 		* images/
 		* css/ -> 
@@ -43,7 +43,7 @@ yourProject/ ->
 
 Then, reference the style.css file within the "head" tag of your index.html file like so:
 
-```js
+```html
 <html>
 	<title></title>
 	<head>
@@ -57,7 +57,7 @@ Then, reference the style.css file within the "head" tag of your index.html file
 
 Lastly, add all the images from the zip/clone into your "images" directory like so:
 
-```js
+```html
 yourProject/ ->
 		* images/ ->
 			* bottom.png
@@ -73,7 +73,7 @@ yourProject/ ->
 
 First, create a dom element with a unique ID and add it within the "body" tag like so:
 
-```js
+```html
 <body>
 	<div class="container">
 		<div id="quote1"></div>
@@ -83,7 +83,7 @@ First, create a dom element with a unique ID and add it within the "body" tag li
 
 Lastly, pass the value of the quote into the quote() parameters like so:
 
-```js
+```html
 <script>
 	$().ready(function() {
 		$('#quote1').quote({
@@ -98,7 +98,7 @@ Lastly, pass the value of the quote into the quote() parameters like so:
 
 ### Things To Note About quotePlugin Properties
 
-layout : Can take the following options, (top,left,bottom,right).
-firstLine : Takes the first line of the quote, this property has a different font style then the message.
-message : Main quote after the first line.
-fromWho : Author name of the quote.
+1. layout : Can take the following options, (top,left,bottom,right).
+2. firstLine : Takes the first line of the quote, this property has a different font style then the message.
+3. message : Main quote after the first line.
+4. fromWho : Author name of the quote.
