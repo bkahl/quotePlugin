@@ -172,10 +172,83 @@ table {
   	right: -16px;
 }
 
-.bottom-arrow{
+.arrow{
+  	position: absolute;
+}
+
+.arrow.default-top{
+  	background: url(../images/top-arrow-default.png) no-repeat;
+}
+
+.arrow.flipped-top{
+  	background: url(../images/top-arrow-flipped.png) no-repeat;
+}
+
+.arrow.default-right{
+	top: 30px;
+  	background: url(../images/right-arrow-default.png) no-repeat;
+}
+
+.arrow.flipped-right{
+	top: 30px;
+  	background: url(../images/right-arrow-flipped.png) no-repeat;
+}
+
+.arrow.default-bottom{
+  	background: url(../images/bottom-arrow-default.png) no-repeat;
+}
+
+.arrow.flipped-bottom{
+  	background: url(../images/bottom-arrow-flipped.png) no-repeat;
+}
+
+.arrow.default-left{
+	top: 30px;
+  	background: url(../images/left-arrow-default.png) no-repeat;
+}
+
+.arrow.flipped-left{
+	top: 30px;
+  	background: url(../images/left-arrow-flipped.png) no-repeat;
+}
+
+.default-top,
+.flipped-top{
+	top: -34px;
+}
+
+.default-right,
+.flipped-right{
+	right: -33px;
+}
+
+.default-bottom,
+.flipped-bottom{ 
+	bottom: -34px;
+}
+
+.default-left,
+.flipped-left{
+	left: -33px;
+}
+
+.default-bottom,
+.flipped-bottom{ 
+	bottom: -34px;
+}
+
+.default-top,
+.flipped-top,
+.default-bottom,
+.flipped-bottom{
 	width: 27px;
 	height: 19px;
-  	background: url(../images/bottom-arrow.png) no-repeat;
-  	position: absolute;
-	bottom: -34px;
+}
+
+.default-right,
+.flipped-right,
+.default-left,
+.flipped-left{
+	width: 19px;
+	height: 27px;
 }

@@ -11,7 +11,9 @@ function createQuote(id, opts){
 		bottom = opts.layout.bottom || null,
 		left = opts.layout.left || null,
 		width = opts.width,
-		bottomArrowRightPositionInPixels = opts.bottomArrowRightPositionInPixels;
+		arrowTarget = opts.arrowTarget,
+		arrowImg = opts.arrowImg,
+		arrowPixelPositioning = opts.arrowPixelPositioning;
 		
 	// creates markup
 	elements = "<div class='quote'>";
@@ -36,7 +38,7 @@ function createQuote(id, opts){
 		elements += "<div class='bottom-edge'></div>";
 		elements += "<div class='bottom-right-corner'></div>";
 		
-		elements += "<div class='bottom-arrow'></div>";	
+		elements += "<div class='arrow'></div>";	
 	elements += "</div>";
 		
 	// append markup to selector
@@ -47,8 +49,16 @@ function createQuote(id, opts){
 	// by the user.
 	$('#'+id.attr('id')+' > .quote').css('width',width-32);
 	
-	// position the bottom arrow with the user's input for right positioning
-	$('#'+id.attr('id')+' > .quote > .bottom-arrow').css('right',bottomArrowRightPositionInPixels);
+	// position arrow on quote container based upon users input.
+	$('#'+id.attr('id')+' > .quote > .arrow').addClass(arrowImg+'-'+arrowTarget);
+	
+	// position arrow absolutely "top" or "right" based upon users input for arrowTarget(top,right,bottom,left) in pixels.
+	if(arrowTarget === "top" || arrowTarget === "bottom"){
+		$('#'+id.attr('id')+' > .quote > .arrow').css('right',arrowPixelPositioning);
+	}
+	if(arrowTarget === "left" || arrowTarget === "right"){
+		$('#'+id.attr('id')+' > .quote > .arrow').css('top',arrowPixelPositioning);
+	}
 	
 	// relatively postion quote within container based upon user input in the ['layout'] property on the quote()
 	if(top){
@@ -77,7 +87,9 @@ function createQuote(id, opts){
 			firstLine: 'Sed ipsum arcu, cons',
 			message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.',
 			fromWho: 'Pilot contributor',
-			bottomArrowRightPositionInPixels: 77	
+			arrowTarget: 'bottom',
+			arrowImg: 'default',
+			arrowPixelPositioning: 77
 		};
 
         opts = $.extend({}, defaults, options);
