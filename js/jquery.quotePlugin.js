@@ -82,13 +82,13 @@ function createQuote(id, opts){
 
 		// default quote used if user doesn't input their own data	
 		defaults = {
-			layout: { top: 0, left: 0 },
+			layout: { top: 0, left: 0 }, // posible values: top, right, bottom, left
 			width: 280,
 			firstLine: 'Sed ipsum arcu, cons',
 			message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.',
 			fromWho: 'Pilot contributor',
-			arrowTarget: 'bottom',
-			arrowImg: 'default',
+			arrowTarget: 'bottom', // possible values: top, right, bottom, left
+			arrowImg: 'default', // possible values: default, flipped
 			arrowPixelPositioning: 77
 		};
 
