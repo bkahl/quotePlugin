@@ -43,39 +43,34 @@ table {
   border-spacing: 0; }
 
 .quote{
-	width:280px;
+	width:auto;
 	height: auto;
-	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	font-style: italic;
 	color: #333;
-}
-
-.quote .top{
-	width: 280px;
-	height: 16px;
-	background: url(../images/top.png) no-repeat;
+	background: url(../images/background.png);
+	position: relative;
 }
 
 .quote .content{
-	width: 250px;
-	padding: 14px 15px 0px;
-	background: url(../images/content.png) repeat-y;
-}
-
-.quote .content .message > span{
-	font-size: 17px;
-	font-weight: bold;
-	width: 218px;
-}
-
-.quote .content .message > p{
-	margin-left: 21px;
-	margin-right: 10px;
+	overflow: hidden;
+	width: auto;
 }
 
 .quote .content .message{
 	font-size: 13px;
+	position: relative;
+}
+
+.quote .content .message > span{
+	font-size: 17px;
+	line-height: 17px;
+	font-weight: bold;
+}
+
+.quote .content .message > p{
+	margin: 3px 10px 5px 21px;
+	line-height: 18px;
 }
 
 .quote .content .open-quote{
@@ -96,7 +91,8 @@ table {
 
 .quote .content .from{
 	margin-top: 23px;
-	margin-left: 68px;
+	float: right;
+	margin-right: 15px;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 16px;
@@ -104,28 +100,82 @@ table {
 	color: #005581;
 }
 
-.quote .bottom{
-	width: 280px;
-	height: 35px;
-	background: url(../images/bottom.png) no-repeat;
+.top-left-corner{
+  	width: 16px;
+	height: 16px;
+  	background: url(../images/top-left.png) no-repeat;
+  	position: absolute;
+	top: -16px;
+  	left: -16px;
 }
 
+.top-edge{
+	height: 16px;
+  	background: url(../images/top-edge.png) repeat-x;
+  	position: absolute;
+	top: -16px;
+	left: 0;
+	right: 0;
+}
 
+.top-right-corner{
+  	width: 16px;
+	height: 16px;
+  	background: url(../images/top-right.png) no-repeat;
+  	position: absolute;
+	top: -16px;
+  	right: -16px;	
+}
 
+.left-edge{
+  	width: 16px;
+  	background: url(../images/left-edge.png) repeat-y;
+  	position: absolute;
+	left: -16px;
+	top: 0;
+	bottom: 0;
+}
 
+.right-edge{
+  	width: 16px;
+  	background: url(../images/right-edge.png) repeat-y;
+  	position: absolute;
+	right: -16px;
+	top: 0;
+	bottom: 0;	
+}
 
+.bottom-left-corner{
+	width: 16px;
+	height: 16px;
+  	background: url(../images/bottom-left.png) no-repeat;
+  	position: absolute;
+	bottom: -16px;
+  	left: -16px;
+}
 
+.bottom-edge{
+	height: 16px;
+  	background: url(../images/bottom-edge.png) repeat-x;
+  	position: absolute;
+	bottom: -16px;
+	left: 0;
+	right: 0;
+}
 
+.bottom-right-corner{
+	width: 16px;
+	height: 16px;
+  	background: url(../images/bottom-right.png) no-repeat;
+  	position: absolute;
+	bottom: -16px;
+  	right: -16px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.bottom-arrow{
+	width: 27px;
+	height: 19px;
+  	background: url(../images/bottom-arrow.png) no-repeat;
+  	position: absolute;
+	bottom: -34px;
+}
