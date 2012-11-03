@@ -18,11 +18,13 @@
 	<script>
 		$().ready(function() {
 			$('#quote1').quote({
-				layout: { top: 150, left: 200 },
-				width: 400,
+				layout: { bottom: 50, right: 60, width: 500 },
 				firstLine: 'Sed ipsum arcu, cons',
 				message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam roin quis vehicula nunc. Quisque vehicula enim ac diam euismod et  nunc non adipiscing. n tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque v enim ac diam roin quis vehicula nunc. Quisque vehicula enim ac diam euismod et  nunc non adipiscing. Quisque in condimentu magna.euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in coismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.',
-				fromWho: 'Pilot contributor'
+				fromWho: 'Pilot contributor',
+				arrowTarget: 'right',
+				arrowImg: 'flipped',
+				arrowPixelPositioning: 150
 			});
 			
 			$('#quote2').quote({
@@ -30,9 +32,9 @@
 				firstLine: 'Sed ipsum arcu, cons',
 				message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing.',
 				fromWho: 'Pilot contributor',
-				arrowTarget: 'left',
-				arrowImg: 'flipped',
-				arrowPixelPositioning: 90
+				arrowTarget: 'bottom',
+				arrowImg: 'default',
+				arrowPixelPositioning: 77
 			});
 			
 		});

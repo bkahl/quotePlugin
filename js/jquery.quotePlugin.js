@@ -10,7 +10,7 @@ function createQuote(id, opts){
 		right = opts.layout.right || null,
 		bottom = opts.layout.bottom || null,
 		left = opts.layout.left || null,
-		width = opts.width,
+		width = opts.layout.width,
 		arrowTarget = opts.arrowTarget,
 		arrowImg = opts.arrowImg,
 		arrowPixelPositioning = opts.arrowPixelPositioning;
@@ -79,11 +79,10 @@ function createQuote(id, opts){
 (function($){
     $.fn.quote = function(options){
         var id = $(this), defaults, opts;
-
+		
 		// default quote used if user doesn't input their own data	
 		defaults = {
-			layout: { top: 0, left: 0 }, // posible values: top, right, bottom, left
-			width: 280,
+			layout: { top: 0, left: 0, width: 280 }, // posible values: top, right, bottom, left, width
 			firstLine: 'Sed ipsum arcu, cons',
 			message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing. Quisque in condimentu magna.',
 			fromWho: 'Pilot contributor',
@@ -92,8 +91,8 @@ function createQuote(id, opts){
 			arrowPixelPositioning: 77
 		};
 
-        opts = $.extend({}, defaults, options);
-	
+        opts = $.extend(true, defaults, options);
+		
         createQuote(id, opts);
     
         return this;    
