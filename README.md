@@ -84,7 +84,7 @@ yourProject/ ->
 ```
 
 ```html
-***NOTE*** At some point I'll convert these images to a sprite, which is recommended, I've just not had a chance to do so.
+***NOTE*** At some point I'll convert these images to a sprite, which is recommended.
 ```
 
 ### How To Make A Quote Using Quote Plugin
