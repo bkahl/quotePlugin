@@ -14,12 +14,12 @@ Either clone this project or download the zip file to get the jquery.quotePlugin
 First, add jquery.quotePlugin.js to your project "js" directory.
 
 ```html
-yourProject/ ->
-		* images/
-		* css/
-		* js/ ->
-			* jquery.quotePlugin.js
-		* index.html
+|-- yourProject
+|	|-- images
+|	|-- css
+|	|-- js
+|		|-- jquery.quotePlugin.js
+|	|-- index.html
 ```
 
 Then, reference the jquery.quotePlugin.js file within your index.html file at the bottom of the "body" tag NOT in the "head" tag like so:
@@ -33,12 +33,12 @@ Then, reference the jquery.quotePlugin.js file within your index.html file at th
 Second, add style.css to your project "css" directory.
 
 ```html
-yourProject/ ->
-		* images/
-		* css/ -> 
-			* style.css
-		* js/
-		* index.html
+|-- yourProject
+|	|-- images
+|	|-- css
+|		|-- style.css
+|	|-- js
+|	|-- index.html
 ```
 
 Then, reference the style.css file within the "head" tag of your index.html file like so:
@@ -58,29 +58,30 @@ Then, reference the style.css file within the "head" tag of your index.html file
 Lastly, add all the images from the zip/clone into your "images" directory like so:
 
 ```html
-yourProject/ ->
-		* images/ ->
-			* background.png
-			* bottom-arrow-default.png
-			* bottom-arrow-flipped.png
-			* bottom-edge.png
-			* bottom-left.png
-			* bottom-right.png
-			* close-quote.png
-			* left-arrow-default.png
-			* left-arrow-flipped.png
-			* left-edge.png
-			* open-quote.png
-			* right-arrow-default.png
-			* right-arrow-flipped.png
-			* right-edge.png
-			* top-arrow-default.png
-			* top-arrow-flipped.png
-			* top-edge.png
-			* top-left.png
-			* top-right.png
-		* css/
-		* index.html
+|-- yourProject
+|	|-- images
+|		|-- background.png
+|		|-- bottom-arrow-default.png
+|		|-- bottom-arrow-flipped.png
+|		|-- bottom-edge.png
+|		|-- bottom-left.png
+|		|-- bottom-right.png
+|		|-- close-quote.png
+|		|-- left-arrow-default.png
+|		|-- left-arrow-flipped.png
+|		|-- left-edge.png
+|		|-- open-quote.png
+|		|-- right-arrow-default.png
+|		|-- right-arrow-flipped.png
+|		|-- right-edge.png
+|		|-- top-arrow-default.png
+|		|-- top-arrow-flipped.png
+|		|-- top-edge.png
+|		|-- top-left.png
+|		|-- top-right.png
+|	|-- css
+|	|-- js
+|	|-- index.html
 ```
 
 ```html
