@@ -3,6 +3,8 @@
 quotePlugin is a jQjuery plugin that allows user's to dynamically create as many quotes within
 a webpage when needed by specifying it's selector id.
 
+Example: [Demo](http://bkahl.github.com/quotePlugin/)
+
 ## How to Install?
 
 Either clone this project or download the zip file to get the jquery.quotePlugin.js file.
