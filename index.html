@@ -5,6 +5,83 @@
     <title>Makisu ~ CSS 3D Dropdown Concept</title>
     <link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
+	<style>
+		form,input,select,textarea{margin:0; padding:0; color:#fff;}
+
+		div.box{
+		margin:0 auto;
+		width:500px;
+		background:#222;
+		position:relative;
+		top:50px;
+		border:1px solid #262626;
+		}
+
+		div.box h1{ 
+		color:#FFF5CC;
+		font-size:18px;
+		text-transform:uppercase;
+		padding:5px 0 5px 5px;
+		border-bottom:1px solid #161712;
+		border-top:1px solid #161712; 
+		}
+
+		div.box label{
+		width:100%;
+		display: block;
+		background:#1C1C1C;
+		border-top:1px solid #262626;
+		border-bottom:1px solid #161712;
+		padding:10px 0 10px 0;
+		}
+		div.box label span{
+		display: block;
+		color:#bbb;
+		font-size:12px;
+		float:left;
+		width:100px;
+		text-align:right;
+		padding:5px 20px 0 0;
+		}
+
+		div.box .input_text{
+		padding:10px 10px;
+		width:200px;
+		background:#262626;
+		border-bottom: 1px double #171717;
+		border-top: 1px double #171717;
+		border-left:1px double #333;
+		border-right:1px double #333;
+		}
+
+		div.box .message{
+		padding:7px 7px;
+		width:350px;
+		background:#262626;
+		border-bottom: 1px double #171717;
+		border-top: 1px double #171717;
+		border-left:1px double #333;
+		border-right:1px double #333;
+		overflow:hidden;
+		height:150px;
+		}
+
+		div.box .button
+		{
+		margin:0 0 10px 0;
+		padding:4px 7px;
+		background:#CC0000;
+		border:0px;
+		position: relative;
+		top:10px;
+		left:382px;
+		width:100px;
+		border-bottom: 1px double #660000;
+		border-top: 1px double #660000;
+		border-left:1px double #FF0033;
+		border-right:1px double #FF0033;
+		}
+	</style>
 </head>
 <body>
 
@@ -15,13 +92,108 @@
         </hgroup>
     </header>
 
-
+	<div id="quote1"></div>
+	
     <a href="https://github.com/bkahl/quotePlugin" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="http://soulwire.github.com/Makisu/js/makisu.js"></script>
-    <script>
+	 <form action="./" method="post" style="margin-top: 450px; margin-left: 50px;">
+          <div class="box">
+			<h1>**Plugin Demo**</h1>
+            <h1>Layout</h1>
+            <label>
+               <span>Width:</span>
+               		<input type="text" class="input_text" id="width" value="500"/>
+            </label>
+            <label>
+               <span>Top:</span>
+               		<input type="text" class="input_text" id="top" value="300"/>
+            </label>
+            <label>
+               <span>Right:</span>
+               		<input type="text" class="input_text" id="right" value="null"/>
+            </label>
+            <label>
+               <span>Bottom:</span>
+               		<input type="text" class="input_text" id="bottom" value="null"/>
+            </label>
+            <label>
+               <span>Left:</span>
+               		<input type="text" class="input_text" id="left" value="500"/>
+            </label>
+			<h1>Alert Message</h1>
+            <label>
+               <span>First Line Of Quote:</span>
+               		<input type="text" class="input_text" id="firstLine" value="Sed ipsum arcu, cons"/>
+            </label>
+			<label>
+               <span>Message:</span>
+               		<input type="text" class="input_text" id="message" value="Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing."/>
+            </label>
+			<label>
+               <span>Author:</span>
+               		<input type="text" class="input_text" id="fromWho" value="Pilot contributor"/>
+            </label>
 
-    </script>
+			<label>
+               <span>Arrow Target:</span>
+               		<input type="text" class="input_text" id="arrowTarget" value="bottom"/>
+            </label>
+			<label>
+               <span>Arrow Img:</span>
+               		<input type="text" class="input_text" id="arrowImg" value="default"/>
+            </label>
+			<label>
+               <span>Arrow Position:</span>
+               		<input type="text" class="input_text" id="arrowPixelPositioning" value="77"/>
+            </label>
+
+            <label>
+                 <input class="button" value="Submit Form" />
+            </label>
+
+        </div>
+    </form>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/jquery.quotePlugin.js"></script>
+	<script>
+		$().ready(function() {
+			$('#quote1').quote({
+				layout: { top: 300, left: 500, width: 500 },
+				firstLine: 'Sed ipsum arcu, cons',
+				message: 'Proin quis vehicula nunc. Quisque vehicula enim ac diam euismod et pellentesque eros lacinia. Proin tempor hendrerit nunc non adipiscing.',
+				fromWho: 'Pilot contributor',
+				arrowTarget: 'bottom',
+				arrowImg: 'default',
+				arrowPixelPositioning: 77
+			});
+			
+			$(".button").on("click",function(){
+				var w = $("#width").val(),
+					top = $("#top").val(),
+					right = $("#right").val(),
+					bottom = $("#bottom").val(),
+					left = $("#left").val(),
+					firstLine = $("#firstLine").val(),
+					message = $("#message").val(),
+					fromWho = $("#fromWho").val(),
+					arrowTarget = $("#arrowTarget").val(),
+					arrowImg = $("#arrowImg").val(),
+					arrowPixelPositioning = $("#arrowPixelPositioning").val();
+
+				$("#quote1").empty();
+
+				$("#quote1").quote({
+					layout: { top: top, left: left, width: w, bottom: bottom, right: right },
+					firstLine: firstLine,
+					message: message,
+					fromWho: fromWho,
+					arrowTarget: arrowTarget,
+					arrowImg: arrowImg,
+					arrowPixelPositioning: arrowPixelPositioning
+				});
+			});
+		});
+	</script>
 </body>
 </html>
